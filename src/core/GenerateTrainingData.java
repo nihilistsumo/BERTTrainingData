@@ -73,7 +73,7 @@ public class GenerateTrainingData {
 			for(int i=0; i<minNumPairs; i++) {
 				String pair = posPairs.get(i);
 				String p1 = paras[Integer.parseInt(pair.split("_")[0])]; 
-				String p2 = paras[Integer.parseInt(pair.split("_")[1])];
+				String p2 = paras[Integer.parseInt(pair.split("_")[1])]; 
 				String p1Text = paraTextMap.get(p1); 
 				String p2Text = paraTextMap.get(p2);
 				if(p1Text.length() >= MIN_PARATEXT_LENGTH && p2Text.length() >= MIN_PARATEXT_LENGTH) {

@@ -50,6 +50,7 @@ public class GenerateTrainingData {
 		QueryParser qpID = new QueryParser("Id", new StandardAnalyzer());
 		try {
 			String paraText = is.doc(is.search(qpID.parse(paraID), 1).scoreDocs[0].doc).get("Text");
+			paraText = paraText.replace('\n', ' ');
 			return paraText;
 		} catch (IOException | ParseException e) {
 			// TODO Auto-generated catch block
